@@ -1,0 +1,33 @@
+一、上传文件到远程仓库上
+1.1上传普通文件
+1、打开终端
+2、cd desktop/仓库   切换到仓库文件夹下
+3、git status查看要上传的文件对不对
+4、git add . 把文件存到缓冲区
+5、git status查看文件在不在缓冲区,绿色没问题
+6、git commit -c "备注信息" 上传到本地仓库
+7、git status查看有没有上传成功
+8、git push origin main 将本地仓库上传到远程仓库
+
+1.2上传大型文件
+1、打开终端
+2、cd desktop/仓库   切换到仓库文件夹下
+3、git status查看要上传的文件对不对
+4、git lfs track "要上传的大型文件“
+4、git add . 把文件存到缓冲区
+5、git status查看文件在不在缓冲区,绿色没问题
+6、git commit -c "备注信息" 上传到本地仓库
+7、git status查看有没有上传成功
+8、git lfs push origin main 将本地仓库上传到远程仓库
+
+二、将远程仓库的最新文件更新到本地仓库
+1、打开终端
+2、cd desktop/仓库   切换到仓库文件夹下
+3、git pull origin main
+
+三、下载别人的仓库
+git clone 仓库地址
+
+四、brew加速下载
+HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
